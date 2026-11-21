@@ -1,0 +1,22 @@
+{
+  "name": "youtube-watch-party",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YouTube Watch Party System with completely separated frontend and backend",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev",
+    "start": "npm --prefix backend start",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend test"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "socket.io": "^4.8.4"
+  }
+}
