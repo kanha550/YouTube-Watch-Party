@@ -175,3 +175,19 @@ All 18 tests cover:
 - RBAC validation (playback controls, video changes, role promotions, removals, transfers)
 - Participant action request & approval workflow
 - Chat and system notifications
+
+---
+
+## ☁️ Deploying to Render
+
+This repository includes a Render Blueprint in `render.yaml`. It deploys the frontend and backend as one Node.js web service: the backend serves the production frontend, REST API, and WebSocket connections from the same Render URL.
+
+1. Push the project to a GitHub repository.
+2. Sign in to [Render](https://render.com/) and choose **New + → Blueprint**.
+3. Connect the GitHub repository and select the branch to deploy.
+4. Review the `syncparty` web service and choose **Apply**.
+5. When the deployment finishes, open the service URL shown in Render. The health endpoint is available at `/api/health`.
+
+The Blueprint uses Node.js 22.12.0, installs the backend and frontend from their lockfiles, builds the frontend, then starts the backend. No `VITE_WS_URL` is needed in production; the app connects to the WebSocket server on the same origin.
+
+The service runs without a database, but active rooms are held in memory and will be lost when the service restarts or sleeps. A configured `DATABASE_URL` enables the backend's database writes, but does not restore active rooms after a restart. Render's free web service can also spin down when idle, disconnecting participants.
