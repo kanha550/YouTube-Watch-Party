@@ -9,7 +9,7 @@ export class Room {
     this.state = {
       videoId: initialVideoId,
       currentTime: 0,
-      playing: false,
+      playing: true,
       updatedAt: Date.now()
     };
     this.chatMessages = [];

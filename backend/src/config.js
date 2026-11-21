@@ -1,6 +1,6 @@
 export const CONFIG = {
   PORT: process.env.PORT || 3001,
-  DEFAULT_VIDEO_ID: 'jfKfPfyJRdk', // Lofi Girl - peaceful default video
+  DEFAULT_VIDEO_ID: 'rFZHOHl-L8A', // Lofi Girl - lofi hip hop radio
   MAX_ROOM_PARTICIPANTS: 50,
   ROOM_CODE_LENGTH: 6,
   SYNC_DRIFT_THRESHOLD_SECONDS: 1.5,

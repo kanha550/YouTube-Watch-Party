@@ -9,7 +9,7 @@ export function useWatchParty() {
   const [self, setSelf] = useState<Participant | null>(null);
   const [participants, setParticipants] = useState<Participant[]>([]);
   const [videoState, setVideoState] = useState<VideoState>({
-    videoId: 'jfKfPfyJRdk',
+    videoId: 'rFZHOHl-L8A',
     currentTime: 0,
     playing: false,
     updatedAt: Date.now()

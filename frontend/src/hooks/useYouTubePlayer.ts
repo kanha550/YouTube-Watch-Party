@@ -35,7 +35,7 @@ export function useYouTubePlayer({
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Tracks active video ID safely
-  const currentVideoIdRef = useRef<string>(initialVideoId || 'jfKfPfyJRdk');
+  const currentVideoIdRef = useRef<string>(initialVideoId || 'rFZHOHl-L8A');
   // Flag to prevent feedback echo loops
   const isSyncingRef = useRef(false);
   const progressIntervalRef = useRef<any>(null);

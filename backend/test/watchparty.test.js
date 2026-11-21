@@ -50,8 +50,8 @@ describe('YouTube Watch Party - Core Unit & RBAC Tests', () => {
       assert.ok(room.id);
       assert.equal(room.id.length, 6);
       assert.equal(room.participants.size, 0);
-      assert.equal(room.state.playing, false);
-      assert.ok(room.state.videoId);
+      assert.equal(room.state.playing, true);
+      assert.equal(room.state.videoId, 'rFZHOHl-L8A');
     });
 
     test('first participant automatically becomes HOST', () => {

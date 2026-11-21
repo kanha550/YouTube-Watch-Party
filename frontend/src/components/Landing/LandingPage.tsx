@@ -9,7 +9,7 @@ interface LandingPageProps {
 }
 
 const PRESET_VIDEOS = [
-  { label: '☕ Lofi Chill Beats', id: 'jfKfPfyJRdk' },
+  { label: '☕ Lofi Chill Beats', id: 'rFZHOHl-L8A' },
   { label: '🌆 Synthwave Radio', id: '4xDzrJKXOOY' },
   { label: '🐰 Big Buck Bunny', id: 'aqz-KE-bpKQ' },
   { label: '🌊 Nature 4K Scenic', id: 'BHACKCNDMW8' }
@@ -24,7 +24,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   const [username, setUsername] = useState('');
   const [roomCode, setRoomCode] = useState('');
   const [customVideo, setCustomVideo] = useState('');
-  const [selectedPreset, setSelectedPreset] = useState<string>('jfKfPfyJRdk');
+  const [selectedPreset, setSelectedPreset] = useState<string>('rFZHOHl-L8A');
   const [mode, setMode] = useState<'create' | 'join'>('create');
   const [validationError, setValidationError] = useState<string | null>(null);
 
